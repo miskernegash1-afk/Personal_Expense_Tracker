@@ -15,3 +15,16 @@ while True:
     print("4. Exit")
 
     choice = input("Choose 1-4: ")
+    if choice == "1":
+        name = input("Expense name: ")
+        amount = float(input("Amount: $"))
+        category = input("Category: ")
+
+        expense = {
+        "name": name,
+        "amount": amount,
+        "category": category
+    }
+
+    expenses.append(expense)
+    print("Expense added.")
