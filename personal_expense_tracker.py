@@ -7,6 +7,7 @@ Date: September 28, 2026
 """
 
 expenses = []
+
 while True:
     print("\nPERSONAL EXPENSE TRACKER")
     print("1. Add expense")
@@ -15,16 +16,28 @@ while True:
     print("4. Exit")
 
     choice = input("Choose 1-4: ")
+
     if choice == "1":
         name = input("Expense name: ")
         amount = float(input("Amount: $"))
         category = input("Category: ")
 
         expense = {
-        "name": name,
-        "amount": amount,
-        "category": category
-    }
+            "name": name,
+            "amount": amount,
+            "category": category
+        }
 
-    expenses.append(expense)
-    print("Expense added.")
+        expenses.append(expense)
+        print("Expense added.")
+
+    elif choice == "2":
+        if len(expenses) == 0:
+            print("No expenses yet.")
+        else:
+            for expense in expenses:
+                print(
+                    expense["name"],
+                    expense["amount"],
+                    expense["category"]
+                )
