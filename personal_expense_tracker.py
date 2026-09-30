@@ -41,3 +41,7 @@ while True:
                     expense["amount"],
                     expense["category"]
                 )
+    elif choice == "4":
+        print("Goodbye!")
+        break
+                
