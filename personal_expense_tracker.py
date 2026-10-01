@@ -41,7 +41,16 @@ while True:
                     expense["amount"],
                     expense["category"]
                 )
+
+    elif choice == "3":
+        total = 0
+
+        for expense in expenses:
+            total = total + expense["amount"]
+
+        print("Total spending: $", total)
+
     elif choice == "4":
         print("Goodbye!")
         break
-                
+    
