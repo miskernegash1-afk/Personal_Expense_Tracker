@@ -3,11 +3,12 @@ Program Name: Personal Expense Tracker
 Author: Misker Negash
 Purpose: This program tracks personal expenses.
 Starter Code/Resources: No starter code was used.
-Date: September 28, 2026
+Date: October 2 , 2026
 """
-
+ # Stores all expenses entered by the user
 expenses = []
 
+# Keeps the program running until the user chooses Exit
 while True:
     print("\nPERSONAL EXPENSE TRACKER")
     print("1. Add expense")
@@ -21,7 +22,7 @@ while True:
         name = input("Expense name: ")
         amount = float(input("Amount: $"))
         category = input("Category: ")
-
+  # Store one expense and its information together
         expense = {
             "name": name,
             "amount": amount,
@@ -35,6 +36,7 @@ while True:
         if len(expenses) == 0:
             print("No expenses yet.")
         else:
+            # Display every expense stored in the list
             for expense in expenses:
                 print(
                     expense["name"],
@@ -44,7 +46,7 @@ while True:
 
     elif choice == "3":
         total = 0
-
+     # Add the amount from each expense to the total
         for expense in expenses:
             total = total + expense["amount"]
 
