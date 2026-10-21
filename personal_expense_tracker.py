@@ -8,17 +8,14 @@ Date: October 2 , 2026
  # Stores all expenses entered by the user
 expenses = []
 
-# Keeps the program running until the user chooses Exit
-while True:
+def display_menu():
     print("\nPERSONAL EXPENSE TRACKER")
     print("1. Add expense")
     print("2. View expenses")
     print("3. View total")
     print("4. Exit")
-
-    choice = input("Choose 1-4: ")
-
-    if choice == "1":
+def add_expense():
+        
         name = input("Expense name: ")
         amount = float(input("Amount: $"))
         category = input("Category: ")
@@ -31,8 +28,9 @@ while True:
 
         expenses.append(expense)
         print("Expense added.")
+    
+def view_expenses():
 
-    elif choice == "2":
         if len(expenses) == 0:
             print("No expenses yet.")
         else:
@@ -43,8 +41,9 @@ while True:
                     expense["amount"],
                     expense["category"]
                 )
+    
 
-    elif choice == "3":
+def view_total():
         total = 0
      # Add the amount from each expense to the total
         for expense in expenses:
@@ -52,8 +51,26 @@ while True:
 
         print("Total spending: $", total)
 
-    elif choice == "4":
-        print("Goodbye!")
+def main():
+    """Run the Personal Expense Tracker."""
+    while True:
+        display_menu()
+
+        choice = input("Choose 1-4: ")
+
+        if choice == "1":
+            add_expense()
+
+        elif choice == "2":
+            view_expenses()
+
+        elif choice == "3":
+            view_total()
+
+        elif choice == "4":
+         print("Goodbye!")
         break
     else:
-        print("Invalid choice.")
+         print("Invalid choice.")
+if __name__ == "__main__":
+    main()
