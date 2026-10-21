@@ -8,10 +8,9 @@ Date: October , 2026
 
 
 class Expense:
-    """Represent one personal expense."""
 
     def __init__(self, name, amount, category):
-        """Create an expense with a name, amount, and category."""
+        
         self.name = name
         self.amount = amount
         self.category = category
