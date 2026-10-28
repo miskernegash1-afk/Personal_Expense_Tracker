@@ -27,3 +27,13 @@ def test_total():
     tracker.add_expense("Food", 20.00, "Food")
 
     assert tracker.get_total() == 60.00
+
+def test_category_total():
+    """Test spending totals for a specific category."""
+    tracker = ExpenseTracker()
+
+    tracker.add_expense("McDonalds", 10.00, "Food")
+    tracker.add_expense("Groceries", 30.00, "Food")
+    tracker.add_expense("Gas", 40.00, "Transportation")
+
+    assert tracker.get_category_total("Food") == 40.00
