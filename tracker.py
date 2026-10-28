@@ -29,3 +29,13 @@ class ExpenseTracker:
             total += expense.amount
 
         return total
+    
+    def get_category_total(self, category):
+        """Return the total spent in one category."""
+        total = 0
+
+        for expense in self.expenses:
+            if expense.category.lower() == category.lower():
+                total += expense.amount
+
+        return total
