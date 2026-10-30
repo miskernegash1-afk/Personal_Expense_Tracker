@@ -19,5 +19,14 @@ def save_expenses(expenses, filename="expenses.json"):
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
 
+def load_expenses(filename="expenses.json"):
+    """Load expenses from a JSON file."""
+    with open(filename, "r") as file:
+        data = json.load(file)
 
-  
+    expenses = []
+
+    for item in data:
+        expenses.append(Expense.from_dict(item))
+
+    return expenses
