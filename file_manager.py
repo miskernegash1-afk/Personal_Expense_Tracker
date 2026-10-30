@@ -13,35 +13,11 @@ from expense import Expense
 def save_expenses(expenses, filename="expenses.json"):
     """Save expenses to a JSON file."""
     data = []
-
     for expense in expenses:
-        data.append({
-            "name": expense.name,
-            "amount": expense.amount,
-            "category": expense.category
-        })
+        data.append(expense.to_dict())
 
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
 
 
-def load_expenses(filename="expenses.json"):
-    """Load expenses from a JSON file."""
-    try:
-        with open(filename, "r") as file:
-            data = json.load(file)
-
-        expenses = []
-
-        for item in data:
-            expense = Expense(
-                item["name"],
-                item["amount"],
-                item["category"]
-            )
-            expenses.append(expense)
-
-        return expenses
-
-    except FileNotFoundError:
-        return []
+  
