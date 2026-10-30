@@ -20,13 +20,22 @@ def save_expenses(expenses, filename="expenses.json"):
         json.dump(data, file, indent=4)
 
 def load_expenses(filename="expenses.json"):
+    
     """Load expenses from a JSON file."""
-    with open(filename, "r") as file:
-        data = json.load(file)
+    try:
+        with open(filename, "r") as file:
+            data = json.load(file)
 
-    expenses = []
+        expenses = []
 
-    for item in data:
-        expenses.append(Expense.from_dict(item))
+        for item in data:
+            expenses.append(Expense.from_dict(item))
 
-    return expenses
+        return expenses
+
+    except FileNotFoundError:
+        return []
+
+    except json.JSONDecodeError:
+        print("The expense file could not be read.")
+        return []
