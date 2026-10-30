@@ -14,3 +14,19 @@ class Expense:
         self.name = name
         self.amount = amount
         self.category = category
+    def to_dict(self):
+        """Convert the expense into a dictionary for JSON storage."""
+        return {
+            "name": self.name,
+            "amount": self.amount,
+            "category": self.category
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        """Create an Expense object from saved dictionary data."""
+        return cls(
+            data["name"],
+            data["amount"],
+            data["category"]
+        )
