@@ -1,3 +1,3 @@
-## Final Project Presentation
-[Watch Presentation Video] https://github.com/miskernegash1-afk/Personal_Expense_Tracker/blob/main/Personal%20expense%20trucker%20assigment.mp4
-[View PowerPoint Slides] https://github.com/miskernegash1-afk/Personal_Expense_Tracker/blob/main/Project%201%20Pyton.pptx
+## project two presntation 
+https://studentcscc-my.sharepoint.com/:v:/g/personal/mnegash5_student_cscc_edu/IQBRL8R3PIHQRKZrCcPN4IWnAdk2uXXRLslx3R3PkDcEYeU?e=L3Yn9b
+https://studentcscc-my.sharepoint.com/:p:/g/personal/mnegash5_student_cscc_edu/IQC2HLsHEaR2RrkKGR-JDLIKAWNgIRpAxhYfHDytVX-GOw4?e=BajfqU
