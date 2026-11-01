@@ -3,7 +3,7 @@ Program Name: Personal Expense Tracker
 Author: Misker Negash
 Purpose: Manages expenses and calculates spending totals.
 Starter Code/Resources: Project 1 Personal Expense Tracker.
-Date: October , 2026
+Date: November 1, 2026
 """
 
 from expense import Expense

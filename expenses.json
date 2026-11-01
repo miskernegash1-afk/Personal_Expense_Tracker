@@ -1,0 +1,22 @@
+[
+    {
+        "name": "apple",
+        "amount": 20.0,
+        "category": "food"
+    },
+    {
+        "name": "apple",
+        "amount": 34.0,
+        "category": "food"
+    },
+    {
+        "name": "gas",
+        "amount": 40.0,
+        "category": "transportation"
+    },
+    {
+        "name": "food",
+        "amount": 20.0,
+        "category": "food"
+    }
+]

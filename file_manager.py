@@ -3,7 +3,7 @@ Program Name: Personal Expense Tracker
 Author: Misker Negash
 Purpose: Saves and loads expense data using JSON.
 Starter Code/Resources: Project 1 Personal Expense Tracker.
-Date: October 2026
+Date: November 1, 2026
 """
 
 import json
